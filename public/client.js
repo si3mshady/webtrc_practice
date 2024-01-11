@@ -5,9 +5,9 @@ const shareButtom = document.getElementById("screen-share")
 
 shareButtom.addEventListener("click", async () => {
     const config = {
-        audio: true,
+        // audio: true,
         video: true,
-        preferCurrentTab: true
+        // preferCurrentTab: true
     }
 
     try {

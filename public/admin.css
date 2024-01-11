@@ -1,5 +1,6 @@
 body {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100vh;
@@ -8,11 +9,11 @@ body {
     color: #00FF00;
   }
   
-  .video-container {
+  /* .video-container {
     text-align: center;
   }
-  
+   */
   video {
-    max-width: 100%;
+    width: 100vw;
     height: auto;
   }
