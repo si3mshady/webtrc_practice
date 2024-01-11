@@ -26,7 +26,7 @@ io.on("connection", (socket) => {
     socket.on("sdp-answer", (answer) => { 
         console.log('New SDP answer from remote user ', socket.id);
         console.log("SDP ANSWER from remote user ", answer)        
-        socket.broadcast.emit('sdp-answer', offer)
+        socket.broadcast.emit('sdp-answer', answer)
     });
 
     socket.on("ice-candidate", (candidate) => { 

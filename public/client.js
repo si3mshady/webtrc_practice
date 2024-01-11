@@ -12,8 +12,12 @@ shareButtom.addEventListener("click", async () => {
 
     try {
       const videoStream = await navigator.mediaDevices.getDisplayMedia(config)    
-      peer.addTrack(videoStream.getVideoTracks()[0] , videoStream)
-
+// add track to peer connection
+    // peer.addTrack(stream.getVideoTracks()[0], stream);
+    videoStream.getTracks().forEach(track => {
+        peer.addTrack(track, videoStream)
+      })
+  
       const sdp = await peer.createOffer()
       await peer.setLocalDescription(sdp)
 
